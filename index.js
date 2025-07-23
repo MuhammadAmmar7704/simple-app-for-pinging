@@ -11,7 +11,7 @@ const targetURL = "https://httpbin.org/get";
 
 
 // Schedule a GET request every 5 minutes
-cron.schedule("*/1 * * * *", async () => {
+cron.schedule("*/5 * * * *", async () => {
   try {
     const res = await axios.get(targetURL);
     console.log(`[${new Date().toISOString()}] Pinged successfully:`, res.status);
